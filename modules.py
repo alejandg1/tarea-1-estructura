@@ -1,6 +1,6 @@
 # para limpiar la termina#para limpiar la terminall
 import os
-
+from sys import platform
 # para añadir delay al presentar las respuestas
 import time
 
@@ -28,7 +28,7 @@ def continu():
 def menuBreakCont():
     Ln_continue = True
     print("-------------Ejercicios con Break-Continue---------------")
-    print(" 1. escojer donde se detiene la iteración de una lista")
+    print(" 1. escojer donde se detiene la iteración de una lista \n 2. por hacer \n 3. por hacer \n 4. por hacer \n 5. por hacer  \n 0. ·· regresar al menú anterior ··")
     Ln_option = int(input(">>"))
     if Ln_option == 0:
         return False
@@ -45,6 +45,7 @@ def menuBreakCont():
                 break
         time.sleep(1)
     elif Ln_option == 2:
+
         pass
     elif Ln_option == 3:
         pass
@@ -64,7 +65,7 @@ def menuWith():
     Ln_continueWith = True
     print("-------------Ejercicios con with---------------")
     print(
-        " 1. ingresar el nombre de un archivo que se creará\n 2. leer archivo de txt y presentarlo "
+        " 1. ingresar el nombre de un archivo que se creará\n 2. leer archivo de txt y presentarlo \n 3 por hacer \n 4. por hacer \n 5. por hacer  \n 0. ·· regresar al menú anterior ··"
     )
     Ln_option = int(input(">>"))
     if Ln_option == 0:
@@ -73,7 +74,7 @@ def menuWith():
         print("escriba el nombre del archivo que se creará")
         Lv_nombre = input(">>")
         # crea archivo nuevo con el nombre dado por el usuario
-        with open(f"{Lv_nombre}.txt", "t+w") as newFile:
+        with open(f"{Lv_nombre}.txt", "w") as newFile:
             FL_1 = newFile.write("Hola mundo")
         print("Su archivo fué creado")
         time.sleep(1)
@@ -104,7 +105,7 @@ def menuWith():
 def menuInput():
     print("\n-------------Ejercicios con input---------------")
     print(
-        " 1. ingresar numeros y obtener la multiplicación y suma de dos números \n 2. ingresar cadena y obtener su número de vocales\n 3. ingresar cadenas y obtener una nueva\n 4. ingresar un número y obtener su tabla de multiplicar\n 5. ingresar un número y mostrar su factorial "
+        " 1. ingresar numeros y obtener la multiplicación y suma de dos números \n 2. ingresar cadena y obtener su número de vocales\n 3. ingresar cadenas y obtener una nueva\n 4. ingresar un número y obtener su tabla de multiplicar\n 5. ingresar un número y mostrar su factorial \n 0. ·· regresar al menú anterior ··"
     )
     Ln_option = int(input(">>"))
     if Ln_option == 0:
@@ -172,21 +173,25 @@ def menuInput():
 
 def menuImport():
     Ln_continue = True
-    print("-------------Ejercicios con import---------------")
-    print("por hacer")
-    Ln_option = int(input(">>"))
-    if Ln_option == 1:
-        pass
-    elif Ln_option == 2:
-        pass
-    elif Ln_option == 3:
-        pass
-    elif Ln_option == 4:
-        pass
-    elif Ln_option == 5:
-        pass
-    elif Ln_option == 0:
-        pass
-    else:
-        print("La opción ingresada no es valida")
-        time.sleep(3)
+    print(" a continuación se mostrarán varias formas de usar la sentencia import de python")
+    import math
+    print("se importó por completo el modulo math haciendo de esta forma: 'import math'")
+    print("coseno de 10 usando la libreía math",math.cos(10))
+    print("--------------------------------------------------")
+    time.sleep(2)
+    print("también se puede importar bajo alias o pseudonimos tal que así: 'import math as mth' ")
+    print("factorial del número 20: ",math.factorial(20))
+    
+    print("--------------------------------------------------")
+    time.sleep(2)
+
+    print("con esta sentencia tambien se pueden importar funciones especificas de una librería usandola junto a 'from'  de esta forma: 'from math import factorial'")
+    print("presentando ls información de su sistema actual usando la librería 'sys'", platform )
+    print("--------------------------------------------------")
+    time.sleep(2)
+    print("tambien podemos importar nuestros propios modulos de la mismam manera en que importamos modulos propios del lenguaje: 'import {module}'")
+    print("regresando al menú anterior......")
+    time.sleep(5)
+    print("--------------------------------------------------")
+    print("también se pueden usar juntas las sentencias as, import y from para importar bajo peudonimos funciones especificas")
+    print("de esta forma: from {modules} import {function} as {identificador}")
